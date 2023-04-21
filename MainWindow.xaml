@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MathMastermind"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Title="Math Mastermind" Height="650" Width="1100">
+
+    <Border Background="#1F2327" CornerRadius="10">
+        <Grid>
+            <Image x:Name="Close_Icon" Grid.Column="2" HorizontalAlignment="Right" Width="30" Height="30" MouseDown="CloseApp" Source="/assets/app_close_icon.png" Cursor="Hand" Margin="0,0,30,0" />
+            <Image Height="100" Source="/assets/math_mastermind_logo.png" Margin="30,0,69,0"/>
+
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350" />
+                <ColumnDefinition Width="750" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="450" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+        </Grid>
+    </Border>
 </Window>

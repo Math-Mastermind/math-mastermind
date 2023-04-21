@@ -24,5 +24,10 @@ namespace MathMastermind
         {
             InitializeComponent();
         }
+
+        private void CloseApp(object sender, MouseButtonEventArgs e)
+        {
+            Close();
+        }
     }
 }
