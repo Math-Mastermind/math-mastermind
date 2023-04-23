@@ -1,0 +1,26 @@
+﻿<Page x:Class="MathMastermind.Pages.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MathMastermind"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Home">
+
+    <Grid Margin="30,30,30,30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel VerticalAlignment="Center" ButtonBase.Click="Button_Click" >
+            <local:NavButton Text="Graj" NavUri="/Pages/Play.xaml"  />
+            <local:NavButton Text="Twój profil" NavUri="/Pages/Profile.xaml"  />
+            <local:NavButton Text="Informacje i Pomoc" NavUri="/Pages/Play.xaml"  />
+            <local:NavButton Text="Wyjście" NavUri="/Pages/Play.xaml"  />
+        </StackPanel>
+
+        <Image Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Source="/assets/hero_image.png" Width="410" />
+    </Grid>
+</Page>

@@ -13,13 +13,13 @@
 
     <Border Background="#1F2327" CornerRadius="10">
         <Grid>
-            <Image x:Name="Close_Icon" Grid.Column="2" HorizontalAlignment="Right" Width="30" Height="30" MouseDown="CloseApp" Source="/assets/app_close_icon.png" Cursor="Hand" Margin="0,0,30,0" />
-            <Image Height="100" Source="/assets/math_mastermind_logo.png" Margin="30,0,69,0"/>
+            <Image x:Name="Close_Icon" HorizontalAlignment="Left" Width="30" Height="30" MouseDown="CloseApp" Source="/assets/app_close_icon.png" Cursor="Hand" Margin="1040,35,0,35" />
+            <Image Height="100" Source="/assets/math_mastermind_logo.png" Margin="30,0,819,0"/>
+            <Frame x:Name="MainFrame" Source="Pages/Home.xaml" Grid.Row="1" NavigationUIVisibility="Hidden"/>
 
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="350" />
-                <ColumnDefinition Width="750" />
+                <ColumnDefinition Width="1100" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="100" />

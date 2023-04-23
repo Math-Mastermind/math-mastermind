@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:MathMastermind"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="Theme/Generic.xaml" />
     </Application.Resources>
 </Application>
