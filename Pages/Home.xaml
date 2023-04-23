@@ -13,14 +13,14 @@
             <ColumnDefinition Width="300" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        
+
         <StackPanel VerticalAlignment="Center" ButtonBase.Click="Button_Click" >
-            <local:NavButton Text="Graj" NavUri="/Pages/Play.xaml"  />
-            <local:NavButton Text="Twój profil" NavUri="/Pages/Profile.xaml"  />
-            <local:NavButton Text="Informacje i Pomoc" NavUri="/Pages/Play.xaml"  />
-            <local:NavButton Text="Wyjście" NavUri="/Pages/Play.xaml"  />
+            <local:NavButton Text="Graj" NavUri="/Pages/Play.xaml" Margin="2,5,2,5"  />
+            <local:NavButton Text="Twój profil" NavUri="/Pages/Profile.xaml" Margin="2,5,2,5"  />
+            <local:NavButton Text="Informacje i Pomoc" NavUri="/Pages/Play.xaml" Margin="2,5,2,5"  />
+            <local:NavButton Text="Wyjście" NavUri="/Pages/Play.xaml" Margin="2,5,2,5"  />
         </StackPanel>
 
-        <Image Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Source="/assets/hero_image.png" Width="410" />
+        <Image Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Source="/assets/hero_image.png" Width="440" Height="346" />
     </Grid>
 </Page>
