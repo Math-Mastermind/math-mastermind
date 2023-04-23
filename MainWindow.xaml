@@ -13,7 +13,10 @@
 
     <Border Background="#1F2327" CornerRadius="10">
         <Grid>
-            <Image x:Name="Close_Icon" HorizontalAlignment="Left" Width="30" Height="30" MouseDown="CloseApp" Source="/assets/app_close_icon.png" Cursor="Hand" Margin="1040,35,0,35" />
+            <DockPanel Height="100" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" Margin="0,0,30,0">
+                <Image x:Name="Minimize_Icon" MouseDown="MinimizeApp" Width="30" Height="30" Source="/assets/minimize_icon.png" Cursor="Hand" Margin="0,0,15,0" />
+                <Image x:Name="Close_Icon" Width="30" Height="30" MouseDown="CloseApp" Source="/assets/app_close_icon.png" Cursor="Hand" />
+            </DockPanel>
             <Image Height="100" Source="/assets/math_mastermind_logo.png" Margin="30,0,819,0"/>
             <Frame x:Name="MainFrame" Source="Pages/Home.xaml" Grid.Row="1" NavigationUIVisibility="Hidden"/>
             <Rectangle Grid.Column="0" Grid.Row="0" Fill="Transparent" MouseDown="MoveWindow" Panel.ZIndex="-1" />

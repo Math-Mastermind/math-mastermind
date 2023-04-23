@@ -30,6 +30,11 @@ namespace MathMastermind
             Close();
         }
 
+        private void MinimizeApp(object sender, MouseButtonEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
         private void MoveWindow(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
