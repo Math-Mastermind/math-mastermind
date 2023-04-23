@@ -18,7 +18,7 @@
             <local:NavButton Text="Graj" NavUri="/Pages/Play.xaml" Margin="2,5,2,5"  />
             <local:NavButton Text="Twój profil" NavUri="/Pages/Profile.xaml" Margin="2,5,2,5"  />
             <local:NavButton Text="Informacje i Pomoc" NavUri="/Pages/Play.xaml" Margin="2,5,2,5"  />
-            <local:NavButton Text="Wyjście" NavUri="/Pages/Play.xaml" Margin="2,5,2,5"  />
+            <local:NavButton Text="Wyjście" NavUri="/Pages/Quit.xaml" Margin="2,5,2,5"  />
         </StackPanel>
 
         <Image Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Source="/assets/hero_image.png" Width="440" Height="346" />
