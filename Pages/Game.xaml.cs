@@ -16,26 +16,16 @@ using System.Windows.Shapes;
 namespace MathMastermind.Pages
 {
     /// <summary>
-    /// Logika interakcji dla klasy Play.xaml
+    /// Logika interakcji dla klasy Game.xaml
     /// </summary>
-    public partial class Play : Page
+    public partial class Game : Page
     {
-        public Play()
+        public Game()
         {
             InitializeComponent();
-        }
 
-        private void NavigateNext()
-        {
-            
-            Uri myUri = new Uri("/Pages/Game.xaml", UriKind.Relative);
-            NavigationService.Navigate(myUri);
-        }
-
-        private void Addition(object sender, MouseButtonEventArgs e)
-        {
-            App.Current.Properties["GameMode"] = "addition";
-            NavigateNext();
+            string mode = App.Current.Properties["GameMode"].ToString();
+            ActualGameMode.Content = mode;
         }
     }
 }
