@@ -43,5 +43,17 @@ namespace MathMastermind.Pages
             App.Current.Properties["GameMode"] = "substraction";
             NavigateNext();
         }
+
+        private void Multiplication(object sender, MouseButtonEventArgs e)
+        {
+            App.Current.Properties["GameMode"] = "multiplication";
+            NavigateNext();
+        }
+
+        private void Division(object sender, MouseButtonEventArgs e)
+        {
+            App.Current.Properties["GameMode"] = "division";
+            NavigateNext();
+        }
     }
 }

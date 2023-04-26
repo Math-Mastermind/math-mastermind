@@ -37,5 +37,19 @@
                 <Label Foreground="White" FontWeight="SemiBold" FontSize="14">Odejmowanie</Label>
             </StackPanel>
         </Border>
+
+        <Border Grid.Row="1" Grid.Column="2" Cursor="Hand" MouseDown="Multiplication" Width="120" Height="120" Background="#829224" CornerRadius="5">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Width="50" Height="50" Source="/assets/multiplication_icon.png"/>
+                <Label Foreground="White" FontWeight="SemiBold" FontSize="14">Mnożenie</Label>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="3" Cursor="Hand" MouseDown="Division" Width="120" Height="120" Background="#922424" CornerRadius="5">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Width="50" Height="50" Source="/assets/division_icon.png"/>
+                <Label Foreground="White" FontWeight="SemiBold" FontSize="14">Dzielenie</Label>
+            </StackPanel>
+        </Border>
     </Grid>
 </Page>

@@ -44,6 +44,12 @@ namespace MathMastermind.Pages
                 case "substraction":
                     Substraction(difficulty);
                     break;
+                case "multiplication":
+                    Multiplication(difficulty);
+                    break;
+                case "division":
+                    Division(difficulty);
+                    break;
                 default:
                     break;
             }
@@ -152,6 +158,92 @@ namespace MathMastermind.Pages
             int b = random.Next(min, max);
             int result = a - b;
             string expression = $"{a} - {b}";
+
+            Expression.Content = expression;
+            App.Current.Properties["CorrectAnswer"] = result;
+        }
+
+        private void Multiplication(string difficulty)
+        {
+            var random = new Random();
+            int amin = 0;
+            int amax = 0;
+
+            int bmin = 0;
+            int bmax = 0;
+
+            switch (difficulty)
+            {
+                case "easy":
+                    amin = 1;
+                    amax = 10;
+
+                    bmin = 1;
+                    bmax = 10;
+                    break;
+                case "medium":
+                    amin = 1;
+                    amax = 30;
+
+                    bmin = 1;
+                    bmax = 6;
+                    break;
+                case "hard":
+                    amin = 1;
+                    amax = 50;
+
+                    bmin = 2;
+                    bmax = 10;
+                    break;
+            }
+
+            int a = random.Next(amin, amax);
+            int b = random.Next(bmin, bmax);
+            int result = a * b;
+            string expression = $"{a} • {b}";
+
+            Expression.Content = expression;
+            App.Current.Properties["CorrectAnswer"] = result;
+        }
+
+        private void Division(string difficulty)
+        {
+            var random = new Random();
+            int amin = 0;
+            int amax = 0;
+
+            int bmin = 0;
+            int bmax = 0;
+
+            switch (difficulty)
+            {
+                case "easy":
+                    amin = 1;
+                    amax = 10;
+
+                    bmin = 1;
+                    bmax = 10;
+                    break;
+                case "medium":
+                    amin = 5;
+                    amax = 30;
+
+                    bmin = 2;
+                    bmax = 6;
+                    break;
+                case "hard":
+                    amin = 7;
+                    amax = 50;
+
+                    bmin = 2;
+                    bmax = 10;
+                    break;
+            }
+
+            int a = random.Next(amin, amax);
+            int b = random.Next(bmin, bmax);
+            int result = (a*b) / b;
+            string expression = $"{a*b} ÷ {b}";
 
             Expression.Content = expression;
             App.Current.Properties["CorrectAnswer"] = result;
