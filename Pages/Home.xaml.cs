@@ -22,8 +22,6 @@ namespace MathMastermind.Pages
     {
         public Home()
         {
-            var myProperty = App.Current.Properties["GameMode"];
-
             InitializeComponent();
         }
 

@@ -8,7 +8,10 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Game">
 
-    <Grid>
-        <Label x:Name="ActualGameMode" Content="Test" />
-    </Grid>
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Label Content="Oblicz wyrażenie" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" />
+        <Label x:Name="Expression" Content="2 + 2" Foreground="White" FontSize="50" FontWeight="Bold" HorizontalAlignment="Center" />
+        <TextBox Style="{DynamicResource TextBoxStyle1}" x:Name="UserAnswer" FontWeight="Medium" Background="#3A4249" Width="250" BorderBrush="Transparent"  Foreground="White" FontSize="17" Padding="12,12,12,12" Margin="0,20,0,0" TextChanged="UserAnswer_TextChanged"  />
+        <Button Style="{DynamicResource ButtonStyle1}" Content="Sprawdź" Padding="20,10,20,10" Margin="0,15,0,0" Background="#FF3E7DBC" Foreground="White" FontSize="15" FontWeight="SemiBold" BorderBrush="{x:Null}" Cursor="Hand" />
+    </StackPanel>
 </Page>

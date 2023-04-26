@@ -25,7 +25,29 @@ namespace MathMastermind.Pages
             InitializeComponent();
 
             string mode = App.Current.Properties["GameMode"].ToString();
-            ActualGameMode.Content = mode;
+
+            UserAnswer.Text = "Wynik";
+            UserAnswer.GotFocus += RemoveText;
+            UserAnswer.LostFocus += AddText;
+        }
+
+        public void RemoveText(object sender, EventArgs e)
+        {
+            if (UserAnswer.Text == "Wynik")
+            {
+                UserAnswer.Text = "";
+            }
+        }
+
+        public void AddText(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(UserAnswer.Text))
+                UserAnswer.Text = "Wynik";
+        }
+
+        private void UserAnswer_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Play">
 
-    <Grid>
+    <Grid Margin="30,0,30,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120" />
             <ColumnDefinition Width="120" />
@@ -17,11 +17,14 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="120"/>
             <RowDefinition Height="120"/>
         </Grid.RowDefinitions>
+
+        <Label Grid.ColumnSpan="2" Foreground="White" FontSize="18" VerticalAlignment="Bottom" FontWeight="Medium" Margin="0,0,0,10">Wybierz tryb gry</Label>
         
-        <Border Grid.Row="0" Grid.Column="0" Cursor="Hand" MouseDown="Addition" Width="120" Height="120" Background="BlueViolet" CornerRadius="5">
+        <Border Grid.Row="1" Grid.Column="0" Cursor="Hand" MouseDown="Addition" Width="120" Height="120" Background="BlueViolet" CornerRadius="5">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image Width="50" Height="50" Source="/assets/add_icon.png"/>
                 <Label Foreground="White" FontWeight="SemiBold" FontSize="14">Dodawanie</Label>
