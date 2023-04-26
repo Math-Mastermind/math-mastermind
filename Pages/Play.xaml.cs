@@ -37,5 +37,11 @@ namespace MathMastermind.Pages
             App.Current.Properties["GameMode"] = "addition";
             NavigateNext();
         }
+
+        private void Substraction(object sender, MouseButtonEventArgs e)
+        {
+            App.Current.Properties["GameMode"] = "substraction";
+            NavigateNext();
+        }
     }
 }

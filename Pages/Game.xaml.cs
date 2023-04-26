@@ -41,6 +41,9 @@ namespace MathMastermind.Pages
                 case "addition":
                     Addition(difficulty);
                     break;
+                case "substraction":
+                    Substraction(difficulty);
+                    break;
                 default:
                     break;
             }
@@ -101,16 +104,16 @@ namespace MathMastermind.Pages
             switch (difficulty)
             {
                 case "easy":
-                    min = 0;
-                    max = 10;
+                    min = 1;
+                    max = 30;
                     break;
                 case "medium":
-                    min = 10;
-                    max = 1000;
+                    min = 1;
+                    max = 100;
                     break;
                 case "hard":
                     min = 100;
-                    max = 10000;
+                    max = 5000;
                     break;
             }
 
@@ -118,6 +121,37 @@ namespace MathMastermind.Pages
             int b = random.Next(min, max);
             int result = a + b;
             string expression = $"{a} + {b}";
+
+            Expression.Content = expression;
+            App.Current.Properties["CorrectAnswer"] = result;
+        }
+
+        private void Substraction(string difficulty)
+        {
+            var random = new Random();
+            int min = 0;
+            int max = 0;
+
+            switch (difficulty)
+            {
+                case "easy":
+                    min = 1;
+                    max = 30;
+                    break;
+                case "medium":
+                    min = 1;
+                    max = 100;
+                    break;
+                case "hard":
+                    min = 100;
+                    max = 5000;
+                    break;
+            }
+
+            int a = random.Next(min, max);
+            int b = random.Next(min, max);
+            int result = a - b;
+            string expression = $"{a} - {b}";
 
             Expression.Content = expression;
             App.Current.Properties["CorrectAnswer"] = result;
