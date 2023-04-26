@@ -24,30 +24,103 @@ namespace MathMastermind.Pages
         {
             InitializeComponent();
 
-            string mode = App.Current.Properties["GameMode"].ToString();
-
-            UserAnswer.Text = "Wynik";
-            UserAnswer.GotFocus += RemoveText;
-            UserAnswer.LostFocus += AddText;
+            InitGame();
         }
 
-        public void RemoveText(object sender, EventArgs e)
+        public void InitGame()
         {
-            if (UserAnswer.Text == "Wynik")
+            string mode = App.Current.Properties["GameMode"].ToString();
+            string difficulty = "easy";
+
+            Result.Visibility = Visibility.Collapsed;
+            UserAnswer.IsEnabled = true;
+            UserAnswer.Text = "";
+
+            switch (mode)
             {
-                UserAnswer.Text = "";
+                case "addition":
+                    Addition(difficulty);
+                    break;
+                default:
+                    break;
+            }
+
+            CheckButton.Visibility = Visibility.Visible;
+            NextButton.Visibility = Visibility.Collapsed;
+        }
+
+        private void NextButton_Click(object sender, RoutedEventArgs e)
+        {
+            InitGame();
+        }
+
+        private void TextBox_KeyEnterUpdate(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+               Button_Click(sender, e);
             }
         }
 
-        public void AddText(object sender, EventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(UserAnswer.Text))
-                UserAnswer.Text = "Wynik";
+            string correctAnswer = App.Current.Properties["CorrectAnswer"].ToString();
+            string userAnswer = UserAnswer.Text;
+
+            if (userAnswer == "")
+            {
+                Result.Visibility = Visibility.Visible;
+                Result.Background = Brushes.DarkOrange;
+                ResultText.Content = "Wprowadź odpowiedź!";
+                return;
+            }
+
+            if (correctAnswer == userAnswer)
+            {
+                Result.Visibility = Visibility.Visible;
+                Result.Background = Brushes.Green;
+                ResultText.Content = "Gratulacje! Poprawna odpowiedź!";
+            } else
+            {
+                Result.Visibility = Visibility.Visible;
+                Result.Background = Brushes.Red;
+                ResultText.Content = "Niestety! Niepoprawna odpowiedź!";
+            }
+
+            UserAnswer.IsEnabled = false;
+            CheckButton.Visibility = Visibility.Collapsed;
+            NextButton.Visibility = Visibility.Visible;
         }
 
-        private void UserAnswer_TextChanged(object sender, TextChangedEventArgs e)
+        private void Addition(string difficulty)
         {
+            var random = new Random();
+            int min = 0;
+            int max = 0;
 
+            switch (difficulty)
+            {
+                case "easy":
+                    min = 0;
+                    max = 10;
+                    break;
+                case "medium":
+                    min = 10;
+                    max = 1000;
+                    break;
+                case "hard":
+                    min = 100;
+                    max = 10000;
+                    break;
+            }
+
+            int a = random.Next(min, max);
+            int b = random.Next(min, max);
+            int result = a + b;
+            string expression = $"{a} + {b}";
+
+            Expression.Content = expression;
+            App.Current.Properties["CorrectAnswer"] = result;
         }
     }
 }
