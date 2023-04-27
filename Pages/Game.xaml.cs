@@ -56,6 +56,9 @@ namespace MathMastermind.Pages
                 case "power":
                     Power(difficulty);
                     break;
+                case "delta":
+                    Delta(difficulty);
+                    break;
                 default:
                     break;
             }
@@ -365,6 +368,66 @@ namespace MathMastermind.Pages
             App.Current.Properties["CorrectAnswer"] = result;
         }
 
+        private void Delta(string difficulty)
+        {
+            var random = new Random();
+            int amin = 0;
+            int amax = 0;
+
+            int bmin = 0;
+            int bmax = 0;
+
+            int cmin = 0;
+            int cmax = 0;
+            switch (difficulty)
+            {
+                case "easy":
+                    amin = -2;
+                    amax = 2;
+
+                    bmin = -7;
+                    bmax = 7;
+
+                    cmin = -5;
+                    cmax = 5;
+                    break;
+                case "medium":
+                    amin = -5;
+                    amax = 5;
+
+                    bmin = -14;
+                    bmax = 14;
+
+                    cmin = -10;
+                    cmax = 10;
+                    break;
+                case "hard":
+                    amin = -10;
+                    amax = 10;
+
+                    bmin = -20;
+                    bmax = 20;
+
+                    cmin = -15;
+                    cmax = 15;
+                    break;
+            }
+
+            int a = random.Next(amin, amax);
+            int b = random.Next(bmin, bmax);
+            int c = random.Next(cmin, cmax);
+
+            string bString, cString;
+
+            if (b < 0) bString = $"- {Math.Abs(b)}"; else bString = $"+ {b}";
+            if (c < 0) cString = $"- {Math.Abs(c)}"; else cString = $"+ {c}";
+
+            double result = Math.Pow(b, 2) - (4 * a * c);
+            string expression = $"{a}x\xB2 {bString}x {cString}";
+
+            Expression.Content = expression;
+            App.Current.Properties["CorrectAnswer"] = result;
+        }
 
     }
 }

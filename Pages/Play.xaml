@@ -66,6 +66,13 @@
                 <Label Foreground="Black" FontWeight="SemiBold" FontSize="14">Potęgi</Label>
             </StackPanel>
         </Border>
+
+        <Border Grid.Row="2" Grid.Column="2" Cursor="Hand" MouseDown="Delta" Width="120" Height="120" Background="#B72E2E" CornerRadius="5">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Width="50" Height="50" Source="/assets/delta_icon.png"/>
+                <Label Foreground="White" FontWeight="SemiBold" FontSize="14">Delta</Label>
+            </StackPanel>
+        </Border>
         
         <Button Grid.Row="3" Grid.ColumnSpan="4" Style="{DynamicResource TextButton}" Background="Transparent" Command="NavigationCommands.BrowseBack" Foreground="White" FontSize="13" Cursor="Hand" HorizontalAlignment="Center" Content="Powrót" FontWeight="Medium"/>
     </Grid>
