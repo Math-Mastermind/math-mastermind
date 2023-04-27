@@ -28,7 +28,7 @@ namespace MathMastermind.Pages
         private void NavigateNext()
         {
             
-            Uri myUri = new Uri("/Pages/Game.xaml", UriKind.Relative);
+            Uri myUri = new Uri("/Pages/Difficulty.xaml", UriKind.Relative);
             NavigationService.Navigate(myUri);
         }
 

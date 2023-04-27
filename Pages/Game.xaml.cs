@@ -30,7 +30,7 @@ namespace MathMastermind.Pages
         public void InitGame()
         {
             string mode = App.Current.Properties["GameMode"].ToString();
-            string difficulty = "easy";
+            string difficulty = App.Current.Properties["Difficulty"].ToString();
 
             Result.Visibility = Visibility.Collapsed;
             UserAnswer.IsEnabled = true;
