@@ -23,6 +23,14 @@ namespace MathMastermind.Pages
         public Profile()
         {
             InitializeComponent();
+            var user = User.LoadFromFile();
+
+            XP_Points.Content = user.XP_Points;
+            ELO_Easy.Content = user.ELO_Easy;
+            ELO_Medium.Content = user.ELO_Medium;
+            ELO_Hard.Content = user.ELO_Hard;
+            Correct_Answers.Content = user.Correct_Answers;
+            Wrong_Answers.Content = user.Wrong_Answers;
         }
     }
 }
