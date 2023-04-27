@@ -50,6 +50,9 @@ namespace MathMastermind.Pages
                 case "division":
                     Division(difficulty);
                     break;
+                case "root":
+                    Root(difficulty);
+                    break;
                 default:
                     break;
             }
@@ -244,6 +247,48 @@ namespace MathMastermind.Pages
             int b = random.Next(bmin, bmax);
             int result = (a*b) / b;
             string expression = $"{a*b} ÷ {b}";
+
+            Expression.Content = expression;
+            App.Current.Properties["CorrectAnswer"] = result;
+        }
+
+        private void Root(string difficulty)
+        {
+            var random = new Random();
+            int min = 0;
+            int max = 0;
+            int index = 0;
+            switch (difficulty)
+            {
+                case "easy":
+                    min = 1;
+                    max = 10;
+                    index = 2;
+                    break;
+                case "medium":
+                    min = 10;
+                    max = 20;
+                    index = 2;
+                    break;
+                case "hard":
+                    min = 1;
+                    max = 20;
+                    index = 3;
+                    break;
+            }
+
+            int a = random.Next(min, max);
+            int result = a;
+            string expression = "";
+
+            if (index == 2)
+            {
+                expression = $"\u00B2\u221A{a * a}";
+            } else if (index ==3) 
+            {
+                expression = $"\u00B3\u221A{a * a * a}";
+            }
+
 
             Expression.Content = expression;
             App.Current.Properties["CorrectAnswer"] = result;

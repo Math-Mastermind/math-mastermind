@@ -53,6 +53,13 @@
             </StackPanel>
         </Border>
 
+        <Border Grid.Row="2" Grid.Column="0" Cursor="Hand" MouseDown="Root" Width="120" Height="120" Background="#6E2492" CornerRadius="5">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Width="50" Height="50" Source="/assets/root_icon.png"/>
+                <Label Foreground="White" FontWeight="SemiBold" FontSize="14">Pierwiastki</Label>
+            </StackPanel>
+        </Border>
+
         <Button Grid.Row="3" Grid.ColumnSpan="4" Style="{DynamicResource TextButton}" Background="Transparent" Command="NavigationCommands.BrowseBack" Foreground="White" FontSize="13" Cursor="Hand" HorizontalAlignment="Center" Content="Powrót" FontWeight="Medium"/>
     </Grid>
 </Page>

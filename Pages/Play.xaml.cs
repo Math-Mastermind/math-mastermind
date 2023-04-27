@@ -55,5 +55,11 @@ namespace MathMastermind.Pages
             App.Current.Properties["GameMode"] = "division";
             NavigateNext();
         }
+
+        private void Root(object sender, MouseButtonEventArgs e)
+        {
+            App.Current.Properties["GameMode"] = "root";
+            NavigateNext();
+        }
     }
 }
