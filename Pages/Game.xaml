@@ -12,10 +12,10 @@
         <Label Content="Oblicz wyrażenie" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" />
         <Label x:Name="Expression" Content="2 + 2" Foreground="White" FontSize="50" FontWeight="Bold" HorizontalAlignment="Center" />
         <TextBox KeyUp="TextBox_KeyEnterUpdate" Style="{DynamicResource TextBoxStyle1}" x:Name="UserAnswer" FontWeight="Medium" Background="#3A4249" Width="250" BorderBrush="Transparent"  Foreground="White" FontSize="17" Padding="12,12,12,12" Margin="0,20,0,0"  />
-        <Border x:Name="Result" Background="Green" CornerRadius="5" Margin="0,15,0,0" Padding="10,10,10,10" Visibility="Collapsed" >
+        <Border x:Name="Result" Background="Green" CornerRadius="5" Margin="0,15,0,0" Padding="10,10,10,10" Visibility="Collapsed" Width="250" >
             <Label FontWeight="SemiBold" x:Name="ResultText" Content="Gratulacje!" Foreground="White" />
         </Border>
-        <Button x:Name="CheckButton" Style="{DynamicResource ButtonStyle1}" Content="Sprawdź" Padding="20,10,20,10" Margin="0,15,0,0" Background="#FF3E7DBC" Foreground="White" FontSize="15" FontWeight="SemiBold" BorderBrush="{x:Null}" Cursor="Hand" Click="Button_Click" />
-        <Button x:Name="NextButton" Style="{DynamicResource ButtonStyle1}" Content="Dalej" Visibility="Collapsed" Padding="20,10,20,10" Margin="0,15,0,0" Background="#FF3E7DBC" Foreground="White" FontSize="15" FontWeight="SemiBold" BorderBrush="{x:Null}" Cursor="Hand" Click="NextButton_Click" />
+        <Button x:Name="CheckButton" Style="{DynamicResource ButtonStyle1}" Content="Sprawdź" Padding="20,10,20,10" Margin="0,15,0,0" Background="#FF3E7DBC" Foreground="White" FontSize="15" FontWeight="SemiBold" BorderBrush="{x:Null}" Cursor="Hand" Click="Button_Click" Width="250" />
+        <Button x:Name="NextButton" Style="{DynamicResource ButtonStyle1}" Content="Dalej" Visibility="Collapsed" Padding="20,10,20,10" Margin="0,15,0,0" Background="#FF3E7DBC" Foreground="White" FontSize="15" FontWeight="SemiBold" BorderBrush="{x:Null}" Cursor="Hand" Click="NextButton_Click" Width="250" />
     </StackPanel>
 </Page>
