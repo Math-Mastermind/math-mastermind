@@ -9,6 +9,6 @@
       Title="Quit">
 
     <Grid>
-        
+        <Label Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25">Opuszczanie programu...</Label>
     </Grid>
 </Page>
