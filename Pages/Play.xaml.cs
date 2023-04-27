@@ -61,5 +61,11 @@ namespace MathMastermind.Pages
             App.Current.Properties["GameMode"] = "root";
             NavigateNext();
         }
+
+        private void Power(object sender, MouseButtonEventArgs e)
+        {
+            App.Current.Properties["GameMode"] = "power";
+            NavigateNext();
+        }
     }
 }

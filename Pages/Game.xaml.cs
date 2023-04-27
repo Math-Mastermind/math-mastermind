@@ -53,6 +53,9 @@ namespace MathMastermind.Pages
                 case "root":
                     Root(difficulty);
                     break;
+                case "power":
+                    Power(difficulty);
+                    break;
                 default:
                     break;
             }
@@ -293,5 +296,75 @@ namespace MathMastermind.Pages
             Expression.Content = expression;
             App.Current.Properties["CorrectAnswer"] = result;
         }
+
+        private void Power(string difficulty)
+        {
+            var random = new Random();
+            int amin = 0;
+            int amax = 0;
+
+            int bmin = 0;
+            int bmax = 0;
+
+            switch (difficulty)
+            {
+                case "easy":
+                    amin = 1;
+                    amax = 10;
+
+                    bmin = 2;
+                    bmax = 2;
+                    break;
+                case "medium":
+                    amin = 3;
+                    amax = 12;
+
+                    bmin = 3;
+                    bmax = 3;
+                    break;
+                case "hard":
+                    amin = 2;
+                    amax = 12;
+
+                    bmin = 3;
+                    bmax = 7;
+                    break;
+            }
+
+            double a = random.Next(amin, amax);
+            double power = random.Next(bmin, bmax);
+            double result = 0;
+            string expression = "";
+            if (power == 2)
+            {
+                result = Math.Pow(a,power);
+                expression = $"{a}\u00B2";
+            }
+            else if (power == 3)
+            {
+                result = Math.Pow(a, power);
+                expression = $"{a}\u00B3";
+            }
+            else if (power == 4)
+            {
+                result = Math.Pow(a, power);
+                expression = $"{a}\u2074";
+            }
+            else if (power == 5)
+            {
+                result = Math.Pow(a, power);
+                expression = $"{a}\u2075";
+            }
+            else if (power == 6)
+            {
+                result = Math.Pow(a, power);
+                expression = $"{a}\u2076";
+            }
+
+            Expression.Content = expression;
+            App.Current.Properties["CorrectAnswer"] = result;
+        }
+
+
     }
 }
