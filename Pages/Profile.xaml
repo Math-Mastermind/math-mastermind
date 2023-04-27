@@ -8,7 +8,66 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Profile">
 
-    <Grid>
-        <Label>Profil</Label>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="90" />
+            <RowDefinition Height="90" />
+            <RowDefinition Height="90" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260" />
+            <ColumnDefinition Width="260" />
+        </Grid.ColumnDefinitions>
+
+        <Label HorizontalAlignment="Center" Grid.ColumnSpan="2" Foreground="White" FontSize="20" VerticalAlignment="Center" FontWeight="Medium" Margin="0,0,0,15">Twoje statystyki</Label>
+
+        <Border Grid.Row="1" Background="#394047" CornerRadius="5" Width="250" Height="80" BorderThickness="4,0,0,0" BorderBrush="#1E68B1" Padding="5,0,0,0" >
+            <StackPanel VerticalAlignment="Center">
+                <Label Content="Doświadczenie" Foreground="White" FontSize="15" FontWeight="SemiBold" />
+                <Label x:Name="XP_Points" Content="1233 XP" Foreground="White" FontSize="20" FontWeight="SemiBold" />
+            </StackPanel>
+        </Border>
+
+
+        <Border Grid.Row="2" Background="#394047" CornerRadius="5" Width="250" Height="80" BorderThickness="4,0,0,0" BorderBrush="#1E68B1" Padding="5,0,0,0" >
+            <StackPanel VerticalAlignment="Center">
+                <Label Content="Ranking (Łatwy)" Foreground="White" FontSize="15" FontWeight="SemiBold" />
+                <Label x:Name="ELO_Easy" Content="230 ELO" Foreground="White" FontSize="20" FontWeight="SemiBold" />
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="3" Background="#394047" CornerRadius="5" Width="250" Height="80" BorderThickness="4,0,0,0" BorderBrush="#1E68B1" Padding="5,0,0,0" >
+            <StackPanel VerticalAlignment="Center">
+                <Label Content="Ranking (Średni)" Foreground="White" FontSize="15" FontWeight="SemiBold" />
+                <Label x:Name="ELO_Medium" Content="321 ELO" Foreground="White" FontSize="20" FontWeight="SemiBold" />
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="1" Background="#394047" CornerRadius="5" Width="250" Height="80" BorderThickness="4,0,0,0" BorderBrush="#1E68B1" Padding="5,0,0,0" >
+            <StackPanel VerticalAlignment="Center">
+                <Label Content="Ranking (Trudny)" Foreground="White" FontSize="15" FontWeight="SemiBold" />
+                <Label x:Name="ELO_Hard" Content="3321 ELO" Foreground="White" FontSize="20" FontWeight="SemiBold" />
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="2" Grid.Column="1" Background="#394047" CornerRadius="5" Width="250" Height="80" BorderThickness="4,0,0,0" BorderBrush="#1E68B1" Padding="5,0,0,0" >
+            <StackPanel VerticalAlignment="Center">
+                <Label Content="Liczba poprawnych odpowiedzi" Foreground="White" FontSize="15" FontWeight="SemiBold" />
+                <Label x:Name="Correct_Answers" Content="123" Foreground="White" FontSize="20" FontWeight="SemiBold" />
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="3" Grid.Column="1" Background="#394047" CornerRadius="5" Width="250" Height="80" BorderThickness="4,0,0,0" BorderBrush="#1E68B1" Padding="5,0,0,0" >
+            <StackPanel VerticalAlignment="Center">
+                <Label Content="Liczba błędnych odpowiedzi" Foreground="White" FontSize="15" FontWeight="SemiBold" />
+                <Label x:Name="Wrong_Answers" Content="51" Foreground="White" FontSize="20" FontWeight="SemiBold" />
+            </StackPanel>
+        </Border>
+
+        <Button Grid.Row="4" Grid.ColumnSpan="2" Style="{DynamicResource TextButton}" Background="Transparent" Command="NavigationCommands.BrowseBack" Foreground="White" FontSize="13" Cursor="Hand" HorizontalAlignment="Center" Content="Powrót" FontWeight="Medium"/>
+
     </Grid>
 </Page>
