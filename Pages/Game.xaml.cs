@@ -20,6 +20,8 @@ namespace MathMastermind.Pages
     /// </summary>
     public partial class Game : Page
     {
+        User user = User.LoadFromFile();
+
         public Game()
         {
             InitializeComponent();
