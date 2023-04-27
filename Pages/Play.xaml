@@ -20,6 +20,7 @@
             <RowDefinition Height="70"/>
             <RowDefinition Height="130"/>
             <RowDefinition Height="130"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
         <Label HorizontalAlignment="Center" Grid.ColumnSpan="4" Foreground="White" FontSize="20" VerticalAlignment="Center" FontWeight="Medium" Margin="0,0,0,15">Wybierz tryb gry</Label>
@@ -51,5 +52,7 @@
                 <Label Foreground="White" FontWeight="SemiBold" FontSize="14">Dzielenie</Label>
             </StackPanel>
         </Border>
+
+        <Button Grid.Row="3" Grid.ColumnSpan="4" Style="{DynamicResource TextButton}" Background="Transparent" Command="NavigationCommands.BrowseBack" Foreground="White" FontSize="13" Cursor="Hand" HorizontalAlignment="Center" Content="Powrót" FontWeight="Medium"/>
     </Grid>
 </Page>

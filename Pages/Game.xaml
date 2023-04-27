@@ -17,5 +17,6 @@
         </Border>
         <Button x:Name="CheckButton" Style="{DynamicResource ButtonStyle1}" Content="Sprawdź" Padding="20,10,20,10" Margin="0,15,0,0" Background="#FF3E7DBC" Foreground="White" FontSize="15" FontWeight="SemiBold" BorderBrush="{x:Null}" Cursor="Hand" Click="Button_Click" Width="250" />
         <Button x:Name="NextButton" Style="{DynamicResource ButtonStyle1}" Content="Dalej" Visibility="Collapsed" Padding="20,10,20,10" Margin="0,15,0,0" Background="#FF3E7DBC" Foreground="White" FontSize="15" FontWeight="SemiBold" BorderBrush="{x:Null}" Cursor="Hand" Click="NextButton_Click" Width="250" />
+        <Button Style="{DynamicResource TextButton}" Background="Transparent" Command="NavigationCommands.BrowseBack" Foreground="White" FontSize="13" Cursor="Hand" HorizontalAlignment="Center" Content="Powrót" FontWeight="Medium" Margin="0,10,0,0" /> 
     </StackPanel>
 </Page>
