@@ -17,7 +17,7 @@
         <StackPanel VerticalAlignment="Center" ButtonBase.Click="Button_Click" >
             <local:NavButton Text="Graj" NavUri="/Pages/Play.xaml" Margin="2,5,2,5"  />
             <local:NavButton Text="Twój profil" NavUri="/Pages/Profile.xaml" Margin="2,5,2,5"  />
-            <local:NavButton Text="Informacje i Pomoc" NavUri="/Pages/Play.xaml" Margin="2,5,2,5"  />
+            <local:NavButton Text="Informacje i Pomoc" NavUri="/Pages/Help.xaml" Margin="2,5,2,5"  />
             <local:NavButton Text="Wyjście" NavUri="/Pages/Quit.xaml" Margin="2,5,2,5"  />
         </StackPanel>
 
