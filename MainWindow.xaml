@@ -18,7 +18,7 @@
                 <Image x:Name="Close_Icon" Width="30" Height="30" MouseDown="CloseApp" Source="/assets/app_close_icon.png" Cursor="Hand" />
             </DockPanel>
             <Image Height="100" Source="/assets/math_mastermind_logo.png" Margin="30,0,819,0"/>
-            <Frame x:Name="MainFrame" Source="Pages/Home.xaml" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+            <Frame Focusable="False" x:Name="MainFrame" Source="Pages/Home.xaml" Grid.Row="1" NavigationUIVisibility="Hidden"/>
             <Rectangle Grid.Column="0" Grid.Row="0" Fill="Transparent" MouseDown="MoveWindow" Panel.ZIndex="-1" />
 
             <Label Grid.Row="2" FontSize="14" VerticalAlignment="Center" Foreground="LightGray" FontWeight="Medium" Margin="30,0,0,0">©️ Math Mastermind by Patryk Skolimowski i Jakub Ceregra</Label>
