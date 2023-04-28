@@ -107,7 +107,7 @@ namespace MathMastermind.Pages
             {
                 Result.Visibility = Visibility.Visible;
                 Result.Background = Brushes.Red;
-                ResultText.Content = "Niestety! Niepoprawna odpowiedź!";
+                ResultText.Content = $"Niestety! Niepoprawna odpowiedź!\nPoprawna odpowiedź to {correctAnswer}.";
             }
 
             UserAnswer.IsEnabled = false;
