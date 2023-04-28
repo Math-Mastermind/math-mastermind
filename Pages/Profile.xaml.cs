@@ -25,10 +25,10 @@ namespace MathMastermind.Pages
             InitializeComponent();
             var user = User.LoadFromFile();
 
-            XP_Points.Content = user.XP_Points;
-            ELO_Easy.Content = user.ELO_Easy;
-            ELO_Medium.Content = user.ELO_Medium;
-            ELO_Hard.Content = user.ELO_Hard;
+            XP_Points.Content = $"{user.XP_Points} XP";
+            ELO_Easy.Content = $"{user.ELO_Easy} ELO";
+            ELO_Medium.Content = $"{user.ELO_Medium} ELO";
+            ELO_Hard.Content = $"{user.ELO_Hard} ELO";
             Correct_Answers.Content = user.Correct_Answers;
             Wrong_Answers.Content = user.Wrong_Answers;
         }
