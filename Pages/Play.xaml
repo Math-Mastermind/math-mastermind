@@ -28,56 +28,56 @@
         <Border Grid.Row="1" Grid.Column="0" Cursor="Hand" MouseDown="Addition" Width="120" Height="120" Background="#245692" CornerRadius="5">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image Width="50" Height="50" Source="/assets/add_icon.png"/>
-                <Label Foreground="White" FontWeight="SemiBold" FontSize="14">Dodawanie</Label>
+                <Label HorizontalAlignment="Center" Foreground="White" FontWeight="SemiBold" FontSize="14">Dodawanie</Label>
             </StackPanel>
         </Border>
 
         <Border Grid.Row="1" Grid.Column="1" Cursor="Hand" MouseDown="Substraction" Width="120" Height="120" Background="#24927E" CornerRadius="5">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image Width="50" Height="50" Source="/assets/minus_icon.png"/>
-                <Label Foreground="White" FontWeight="SemiBold" FontSize="14">Odejmowanie</Label>
+                <Label HorizontalAlignment="Center" Foreground="White" FontWeight="SemiBold" FontSize="14">Odejmowanie</Label>
             </StackPanel>
         </Border>
 
         <Border Grid.Row="1" Grid.Column="2" Cursor="Hand" MouseDown="Multiplication" Width="120" Height="120" Background="#829224" CornerRadius="5">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image Width="50" Height="50" Source="/assets/multiplication_icon.png"/>
-                <Label Foreground="White" FontWeight="SemiBold" FontSize="14">Mnożenie</Label>
+                <Label HorizontalAlignment="Center" Foreground="White" FontWeight="SemiBold" FontSize="14">Mnożenie</Label>
             </StackPanel>
         </Border>
 
         <Border Grid.Row="1" Grid.Column="3" Cursor="Hand" MouseDown="Division" Width="120" Height="120" Background="#922424" CornerRadius="5">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image Width="50" Height="50" Source="/assets/division_icon.png"/>
-                <Label Foreground="White" FontWeight="SemiBold" FontSize="14">Dzielenie</Label>
+                <Label HorizontalAlignment="Center" Foreground="White" FontWeight="SemiBold" FontSize="14">Dzielenie</Label>
             </StackPanel>
         </Border>
 
         <Border Grid.Row="2" Grid.Column="0" Cursor="Hand" MouseDown="Root" Width="120" Height="120" Background="#6E2492" CornerRadius="5">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image Width="50" Height="50" Source="/assets/root_icon.png"/>
-                <Label Foreground="White" FontWeight="SemiBold" FontSize="14">Pierwiastki</Label>
+                <Label HorizontalAlignment="Center" Foreground="White" FontWeight="SemiBold" FontSize="14">Pierwiastki</Label>
             </StackPanel>
         </Border>
 
         <Border Grid.Row="2" Grid.Column="1" Cursor="Hand" MouseDown="Power" Width="120" Height="120" Background="#2FEBC9" CornerRadius="5">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image Width="50" Height="50" Source="/assets/thunder_icon.png"/>
-                <Label Foreground="Black" FontWeight="SemiBold" FontSize="14">Potęgi</Label>
+                <Label HorizontalAlignment="Center" Foreground="Black" FontWeight="SemiBold" FontSize="14">Potęgi</Label>
             </StackPanel>
         </Border>
 
         <Border Grid.Row="2" Grid.Column="2" Cursor="Hand" MouseDown="Delta" Width="120" Height="120" Background="#B72E2E" CornerRadius="5">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image Width="50" Height="50" Source="/assets/delta_icon.png"/>
-                <Label Foreground="White" FontWeight="SemiBold" FontSize="14">Delta</Label>
+                <Label HorizontalAlignment="Center" Foreground="White" FontWeight="SemiBold" FontSize="14">Delta</Label>
             </StackPanel>
         </Border>
 
         <Border Grid.Row="2" Grid.Column="3" Cursor="Hand" MouseDown="Logarytm" Width="120" Height="120" Background="#EEE487" CornerRadius="5">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image Width="50" Height="50" Source="/assets/logarytm_icon.png"/>
-                <Label Foreground="Black" FontWeight="SemiBold" FontSize="14">Logarytm</Label>
+                <Label HorizontalAlignment="Center" Foreground="Black" FontWeight="SemiBold" FontSize="14">Logarytm</Label>
             </StackPanel>
         </Border>
 
