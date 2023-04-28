@@ -103,16 +103,19 @@ namespace MathMastermind.Pages
                 Result.Visibility = Visibility.Visible;
                 Result.Background = Brushes.Green;
                 ResultText.Content = "Gratulacje! Poprawna odpowiedź!";
+                user.Correct_Answers += 1;
             } else
             {
                 Result.Visibility = Visibility.Visible;
                 Result.Background = Brushes.Red;
                 ResultText.Content = $"Niestety! Niepoprawna odpowiedź!\nPoprawna odpowiedź to {correctAnswer}.";
+                user.Wrong_Answers += 1;
             }
 
             UserAnswer.IsEnabled = false;
             CheckButton.Visibility = Visibility.Collapsed;
             NextButton.Visibility = Visibility.Visible;
+            User.SaveToFile(user);
         }
 
         private void Addition(string difficulty)
