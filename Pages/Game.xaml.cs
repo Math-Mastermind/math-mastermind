@@ -110,18 +110,20 @@ namespace MathMastermind.Pages
                     case "easy":
                         user.XP_Points += 5;
                         user.ELO_Easy += 3;
+                        ResultText.Content = $"Gratulacje! Poprawna odpowiedź!\nTwój ranking (łatwy) wynosi {user.ELO_Easy} (+3)";
                         break;
                     case "medium":
                         user.XP_Points += 10;
                         user.ELO_Medium += 5;
+                        ResultText.Content = $"Gratulacje! Poprawna odpowiedź!\nTwój ranking (średni) wynosi {user.ELO_Medium} (+5)";
                         break;
                     case "hard":
                         user.XP_Points += 15;
                         user.ELO_Hard += 9;
+                        ResultText.Content = $"Gratulacje! Poprawna odpowiedź!\nTwój ranking (trudny) wynosi {user.ELO_Hard} (+9)";
                         break;
                 }
 
-                ResultText.Content = "Gratulacje! Poprawna odpowiedź!";
             } else
             {
                 Result.Visibility = Visibility.Visible;
@@ -134,18 +136,20 @@ namespace MathMastermind.Pages
                     case "easy":
                         user.XP_Points += 1;
                         user.ELO_Easy -= 1;
+                        ResultText.Content = $"Niestety! Niepoprawna odpowiedź!\nPoprawna odpowiedź to {correctAnswer}.\nTwój ranking (łatwy) wynosi {user.ELO_Easy} (-1)";
                         break;
                     case "medium":
                         user.XP_Points += 1;
                         user.ELO_Medium -= 3;
+                        ResultText.Content = $"Niestety! Niepoprawna odpowiedź!\nPoprawna odpowiedź to {correctAnswer}.\nTwój ranking (średni) wynosi {user.ELO_Medium} (-3)";
                         break;
                     case "hard":
                         user.XP_Points += 1;
                         user.ELO_Hard -= 8;
+                        ResultText.Content = $"Niestety! Niepoprawna odpowiedź!\nPoprawna odpowiedź to {correctAnswer}.\nTwój ranking (trudny) wynosi {user.ELO_Hard} (-8)";
                         break;
                 }
 
-                ResultText.Content = $"Niestety! Niepoprawna odpowiedź!\nPoprawna odpowiedź to {correctAnswer}.";
             }
 
             UserAnswer.IsEnabled = false;
