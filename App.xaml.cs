@@ -18,7 +18,9 @@ namespace MathMastermind
     /// </summary>
     /// 
 
+
     public class User {
+        public static string FilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "MathMastermind\\UserData.json");
         public int XP_Points { get; set; }
         public int ELO_Easy { get; set; }
         public int ELO_Medium { get; set; }
@@ -28,7 +30,14 @@ namespace MathMastermind
 
         public User()
         {
-            if (!File.Exists("UserConfig.json"))
+            var dirPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "MathMastermind");
+            
+            if (!Directory.Exists(dirPath))
+            {
+                Directory.CreateDirectory(dirPath);
+            }
+
+            if (!File.Exists(FilePath))
             {
                 XP_Points = 0;
                 ELO_Easy = 0;
@@ -43,14 +52,14 @@ namespace MathMastermind
 
         public static void SaveToFile(User user)
         {
-            string fileName = "UserConfig.json";
+            string fileName = FilePath;
             string jsonString = JsonSerializer.Serialize(user);
             File.WriteAllText(fileName, jsonString);
         }
 
         public static User LoadFromFile()
         {
-            string fileName = "UserConfig.json";
+            string fileName = FilePath;
             string jsonString = File.ReadAllText(fileName);
             User user = JsonSerializer.Deserialize<User>(jsonString);
 
