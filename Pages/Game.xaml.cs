@@ -61,6 +61,9 @@ namespace MathMastermind.Pages
                 case "delta":
                     Delta(difficulty);
                     break;
+                case "logarytm":
+                    Logarytm(difficulty);
+                    break;
                 default:
                     break;
             }
@@ -426,6 +429,83 @@ namespace MathMastermind.Pages
 
             double result = Math.Pow(b, 2) - (4 * a * c);
             string expression = $"{a}x\xB2 {bString}x {cString}";
+
+            Expression.Content = expression;
+            App.Current.Properties["CorrectAnswer"] = result;
+        }
+
+        private void Logarytm(string difficulty)
+        {
+            var random = new Random();
+            int amin = 0;
+            int amax = 0;
+
+            int bmin = 0;
+            int bmax = 0;
+
+            switch (difficulty)
+            {
+                case "easy":
+                    amin = 2;
+                    amax = 2;
+
+                    bmin = 1;
+                    bmax = 12;
+                    break;
+                case "medium":
+                    amin = 3;
+                    amax = 6;
+
+                    bmin = 2;
+                    bmax = 7;
+                    break;
+                case "hard":
+                    amin = 4;
+                    amax = 10;
+
+                    bmin = 3;
+                    bmax = 10;
+                    break;
+            }
+
+            double a = random.Next(amin, amax);
+            double b = random.Next(bmin, bmax);
+            double c = Math.Pow(a, b);
+            double result = b;
+            string expression = "";
+
+            if (a == 2)
+            {
+                expression = $"log\u2082 {c}";
+            }
+            else if (a == 3)
+            {
+                expression = $"log\u2083 {c}";
+            }
+            else if (a == 4)
+            {
+                expression = $"log\u2084 {c}";
+            }
+            else if (a == 5)
+            {
+                expression = $"log\u2085 {c}";
+            }
+            else if (a == 6)
+            {
+                expression = $"log\u2086 {c}";
+            }
+            else if (a == 7)
+            {
+                expression = $"log\u2087 {c}";
+            }
+            else if (a == 8)
+            {
+                expression = $"log\u2088 {c}";
+            }
+            else if (a == 9)
+            {
+                expression = $"log\u2089 {c}";
+            }
 
             Expression.Content = expression;
             App.Current.Properties["CorrectAnswer"] = result;

@@ -73,5 +73,11 @@ namespace MathMastermind.Pages
             App.Current.Properties["GameMode"] = "delta";
             NavigateNext();
         }
+
+        private void Logarytm(object sender, MouseButtonEventArgs e)
+        {
+            App.Current.Properties["GameMode"] = "logarytm";
+            NavigateNext();
+        }
     }
 }
