@@ -257,17 +257,17 @@ namespace MathMastermind.Pages
                     bmax = 10;
                     break;
                 case "medium":
-                    amin = 1;
+                    amin = 12;
                     amax = 30;
 
-                    bmin = 1;
+                    bmin = 3;
                     bmax = 6;
                     break;
                 case "hard":
-                    amin = 1;
+                    amin = 12;
                     amax = 50;
 
-                    bmin = 2;
+                    bmin = 4;
                     bmax = 10;
                     break;
             }
@@ -300,17 +300,17 @@ namespace MathMastermind.Pages
                     bmax = 10;
                     break;
                 case "medium":
-                    amin = 5;
+                    amin = 12;
                     amax = 30;
 
-                    bmin = 2;
-                    bmax = 6;
+                    bmin = 4;
+                    bmax = 8;
                     break;
                 case "hard":
-                    amin = 7;
+                    amin = 12;
                     amax = 50;
 
-                    bmin = 2;
+                    bmin = 5;
                     bmax = 10;
                     break;
             }
@@ -343,7 +343,7 @@ namespace MathMastermind.Pages
                     index = 2;
                     break;
                 case "hard":
-                    min = 1;
+                    min = 6;
                     max = 20;
                     index = 3;
                     break;
@@ -392,7 +392,7 @@ namespace MathMastermind.Pages
                     bmax = 3;
                     break;
                 case "hard":
-                    amin = 2;
+                    amin = 6;
                     amax = 12;
 
                     bmin = 3;
@@ -525,7 +525,7 @@ namespace MathMastermind.Pages
                     amax = 10;
 
                     bmin = 3;
-                    bmax = 10;
+                    bmax = 13;
                     break;
             }
 
