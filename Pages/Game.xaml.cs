@@ -136,16 +136,34 @@ namespace MathMastermind.Pages
                     case "easy":
                         user.XP_Points += 1;
                         user.ELO_Easy -= 1;
+
+                        if (user.ELO_Easy < 0)
+                        {
+                            user.ELO_Easy = 0;
+                        }
+
                         ResultText.Content = $"Niestety! Niepoprawna odpowiedź!\nPoprawna odpowiedź to {correctAnswer}.\nTwój ranking (łatwy) wynosi {user.ELO_Easy} (-1)";
                         break;
                     case "medium":
                         user.XP_Points += 1;
                         user.ELO_Medium -= 3;
+
+                        if (user.ELO_Medium < 0)
+                        {
+                            user.ELO_Medium = 0;
+                        }
+
                         ResultText.Content = $"Niestety! Niepoprawna odpowiedź!\nPoprawna odpowiedź to {correctAnswer}.\nTwój ranking (średni) wynosi {user.ELO_Medium} (-3)";
                         break;
                     case "hard":
                         user.XP_Points += 1;
                         user.ELO_Hard -= 8;
+
+                        if (user.ELO_Hard < 0)
+                        {
+                            user.ELO_Hard = 0;
+                        }
+
                         ResultText.Content = $"Niestety! Niepoprawna odpowiedź!\nPoprawna odpowiedź to {correctAnswer}.\nTwój ranking (trudny) wynosi {user.ELO_Hard} (-8)";
                         break;
                 }
